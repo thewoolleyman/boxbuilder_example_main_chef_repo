@@ -1,0 +1,1 @@
+bash "touch $HOME/.tmp_boxbuilder_example1_chef_cookbook.touchfile"
