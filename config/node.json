@@ -1,7 +1,9 @@
 {
   "boxbuilder_example1_chef_config_key": "boxbuilder_example1_chef_config_value",
+  "boxbuilder_example2_chef_config_key": "boxbuilder_example2_chef_config_value",
   "run_list": [
-    "recipe[boxbuilder_example1_cookbook]"
+    "recipe[boxbuilder_example1_cookbook]",
+    "recipe[boxbuilder_example2_cookbook]"
   ]
 }
 
