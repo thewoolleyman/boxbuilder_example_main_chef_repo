@@ -1,8 +1,8 @@
 touchfile = "#{ENV['HOME']}/.tmp_boxbuilder_example1_chef_cookbook.touchfile"
 
 file touchfile do
-  owner "#{ENV['USER']}"
-#  group "#{ENV['USER']}"
+  owner "#{ENV['SUDO_USER'] || ENV['USER']}"
+  group ENV['SUDO_GID'] if ENV['SUDO_GID']
   mode "0644"
   action :create
 end
