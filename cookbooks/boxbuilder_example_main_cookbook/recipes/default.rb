@@ -1,4 +1,4 @@
-touchfile = "#{ENV['HOME']}/.tmp_boxbuilder_example1_chef_cookbook.touchfile"
+touchfile = "#{ENV['HOME']}/.tmp_boxbuilder_example_main_chef_cookbook.touchfile"
 
 file touchfile do
   owner "#{ENV['SUDO_USER'] || ENV['USER']}"
@@ -8,6 +8,6 @@ file touchfile do
 end
 
 bash "Write property value to file" do
-  example_value = ENV['boxbuilder_example1_chef_config_key'] || node['boxbuilder_example1_chef_config_key']
+  example_value = ENV['boxbuilder_example_main_chef_config_key'] || node['boxbuilder_example_main_chef_config_key']
   code "echo '#{example_value}' > #{touchfile}"
 end
