@@ -1,9 +1,9 @@
 {
   "boxbuilder_example_main_chef_config_key": "boxbuilder_example_main_chef_config_value",
-  "boxbuilder_example_dependent_chef_config_key": "boxbuilder_example_dependent_chef_config_set_from_main_value",
+  "boxbuilder_example_dependency_chef_config_key": "boxbuilder_example_dependency_chef_config_set_from_main_value",
   "run_list": [
     "recipe[boxbuilder_example_main_cookbook]",
-    "recipe[boxbuilder_example_dependent_cookbook]"
+    "recipe[boxbuilder_example_dependency_cookbook]"
   ]
 }
 
