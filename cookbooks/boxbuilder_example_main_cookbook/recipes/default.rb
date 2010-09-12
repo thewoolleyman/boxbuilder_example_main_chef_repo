@@ -1,13 +1,2 @@
-touchfile = "#{ENV['HOME']}/.tmp_boxbuilder_example_main_chef_cookbook.touchfile"
-
-file touchfile do
-  owner "#{ENV['SUDO_USER'] || ENV['USER']}"
-  group ENV['SUDO_GID'] if ENV['SUDO_GID']
-  mode "0644"
-  action :create
-end
-
-bash "Write property value to file" do
-  example_value = ENV['boxbuilder_example_main_chef_config_key'] || node['boxbuilder_example_main_chef_config_key']
-  code "echo '#{example_value}' > #{touchfile}"
-end
+include_recipe "boxbuilder_example_main_cookbook::touchfile"
+include_recipe "boxbuilder_example_dependency_cookbook::touchfile"
